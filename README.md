@@ -31,13 +31,11 @@ Set custom from header:
 
 	->setFrom(array('john.doe@example.com' => 'John'))
 
-Set attachment:
-
-- from filesystem:
+Set attachment from filesystem:
 
 	->attach('path/to/file.txt')
 
-- from data:
+Set attachment from data:
 
 	->attach(array(
 		'data' => 'I am an attachmrnt',
