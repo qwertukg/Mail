@@ -23,15 +23,35 @@ Send your message like this:
 
 	IoC::resolve('Mail')
 		->setSubject('Subject')
-		->setTo(array('daniil.rakhmatulin@gmail.com' => 'Daniil Rakhmatulin'))
+		->setTo(array('daniil.rakhmatulin@gmail.com' => 'Daniil Rakhmatulin', 'another@example.com'))
 		->setBody('I am a message.')
 		->send();
+
+Set custom from header:
+
+	->setFrom(array('john.doe@example.com' => 'John'))
+
+Set attachment:
+
+- from filesystem:
+
+	->attach('path/to/file.txt')
+
+- from data:
+
+	->attach(array(
+		'data' => 'I am an attachmrnt',
+		'name' => 'readme.txt',
+		'type' => 'text/plain',
+	))
+
+And all methods from [Swift_Message](http://swiftmailer.org/docs/messages.html)
 
 **That's all!**
 
 Configuration
 -------------
 
-See [options](https://github.com/qwertukg/Captcha/blob/master/Captcha/config/options.php) :)
+See [smtp](https://github.com/qwertukg/Mail/blob/master/mail/config/smtp.php) :)
 
 **Good luck!**
